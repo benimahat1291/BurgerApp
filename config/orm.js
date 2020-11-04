@@ -47,12 +47,12 @@ function printQuestionMarks(num) {
           });
       },
       insertOne: function(table, cols, vals, cb) {
-          var queryString = "INSERT INTOO " + table;
+          var queryString = "INSERT INTO " + table;
           queryString += " (";
           queryString += cols.toString();
           queryString += ") ";
           queryString += "VALUES (";
-          queryString += printQuestionMarks(val.length);
+          queryString += printQuestionMarks(vals.length);
           queryString += ") ";
 
           console.log(queryString);
@@ -64,7 +64,7 @@ function printQuestionMarks(num) {
               cb(result);
           });
       },
-      updateOne: function(table, ObjColVals, condition, cb) {
+      updateOne: function (table, objColVals, condition, cb) {
           var queryString = "UPDATE" + table;
 
           queryString += "SET";
@@ -80,7 +80,7 @@ function printQuestionMarks(num) {
 
               cb(result);
           })
-      },
+      }
   };
 
   module.exports = orm;
