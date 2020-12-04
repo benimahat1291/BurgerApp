@@ -1,7 +1,31 @@
+
+body {
+    background-color: lightgreen;
+}
+
+.title {
+    text-align: center;
+    background-color: DarkGreen;
+    color: orange;
+    padding: 10px
+}
+
+.notdevoured {
+    border: 3px soild green;
+}
+
+
+
+
+
+
+
+
+
+
 li {
   padding: 5px;
   margin: 5px;
-  background: #faebd7;
 }
 
 .label {
