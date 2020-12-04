@@ -1,20 +1,22 @@
-// set up MYSQL connection.
+// Set up MySQL connection.
 var mysql = require("mysql");
 
 var connection = mysql.createConnection({
-    host: "localhost",
-    port: 8080,
-    user: "root",
-    password: "happyface",
-    database: "burgers_db"
+  host: "localhost",
+  port: 3306,
+  user: "root",
+  password: "happyface",
+  database: "burger_db"
 });
-//make connection
-connection.connect(function(err){
-    if (err) {
-        console.error("error connecting: " + err.stack);
-        return;
-    }
-    console.log("connected as id " + connection.threadId);
+
+// Make connection.
+connection.connect(function(err) {
+  if (err) {
+    console.error("error connecting: " + err.stack);
+    return;
+  }
+  console.log("connected as id " + connection.threadId);
 });
-//export connection for ORM use
+
+// Export connection for our ORM to use.
 module.exports = connection;
