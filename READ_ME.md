@@ -1,8 +1,8 @@
 
 # Burgers App
+    Deployed Heroku: https://frozen-tundra-71213.herokuapp.com/
 
 ## Overview
-
 An Simple App that does basic Crud functionatity with a sequalize database
 
 # Here are pictures of the Deployed site
