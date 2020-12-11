@@ -1,13 +1,30 @@
 
 body {
-    background-color: lightgreen;
+    background-image: url("../img/burgers.jpg")
+
 }
 
 .title {
     text-align: center;
-    background-color: DarkGreen;
-    color: orange;
-    padding: 10px
+    background-color: #161616;
+    border: 2px solid red;
+    border-radius: 25px;
+    color: red;
+    margin: auto;
+    width: 70%;
+    padding: 10px;
+    font-size: 3vw;
+    font-family: 'Permanent Marker', cursive;
+    margin-bottom: 2vw;
+}
+
+.titleCard {
+    border: 2px soild red;
+
+}
+
+.subtitle {
+    font-size: 1vw;
 }
 
 .notdevoured {
@@ -15,29 +32,25 @@ body {
 }
 
 
-
-
-
-
-
-
-
-
-li {
-  padding: 5px;
-  margin: 5px;
-}
-
 .label {
   font-weight: bold;
 }
 
-.create-update-form {
-  padding: 5px;
-  margin: 5px;
-  background: aqua;
+
+.order {
+    text-align: center;
+    margin: auto;
+
 }
 
-.form-group {
-  margin-bottom: 5px;
+.cardStyle {
+    background: black;
 }
+
+button {
+    background: red;
+    border-radius: 25px;
+    font-size: 2vw;
+    width: 70%;
+}
+

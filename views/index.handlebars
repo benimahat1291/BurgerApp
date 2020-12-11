@@ -1,52 +1,116 @@
-<div class="container">
-    <h1 class="title">Your Personal Burger Bistro!</h1>
+<div class="container" >
+    <div class="order" style="margin-top: 2vw">
+        <h1 class="title">Your Personal Burger Bistro!</h1>
 
-    <div class="addform">
-        <h2>Add a burger</h2>
-        <form class="create-form">
+        <div class="card title" style="border: none">
+         
+                <ul class="list-group list-group-flush"
+                    style=" margin-top: 10px;  border-radius: 25px" class="list-group-item">
 
-            <div class="form-group">
-                <label for="ca">burger Name:</label>
-                <input type="text" id="ca" name="name">
+                    <li>
+                        <div class="list-group-item" style="border-radius: 25px 25px 0px 0px; ; background: black; color: red;">
+                            <h1>Order Any Burger</h1>
+                            <h3>Your Personal Chef will Make it for you.</h3>
+                        </div>
+
+                    </li>
+
+
+                    <li class="list-group-item" style="background: black; color: red;">
+                        <form class="create-form">
+                            <label for="ca">Burger Name: </label>
+                            <input type="text" id="ca" name="name">
+                        </form>
+
+                    </li>
+
+                    <li class="list-group-item" style="border-radius: 0px 0px 25px 25px; background: black; color: red;">
+                        <div class="row" style="padding-bottom: 5px;">
+                            <div class="col-lg-6">
+                            <input  type="radio" name="devoured" value="1" checked> <h4>Eat Right Away!</h4>
+                            </div>
+                            <div class="col-lg-6">
+                            <input  type="radio" name="devoured" value="0"> <h4>Ready to Serve</h4>
+                            </div>
+                        </div>
+
+                        <button style="width: 50% ; color:white"  type="submit">Order</button>
+                    </li>
             </div>
 
-            <div class="form-group">
-                <label for="devoured">devoured?</label><br>
-                <input type="radio" name="devoured" value="1" checked> devoured!<br>
-                <input type="radio" name="devoured" value="0"> Ready to eat!
-            </div>
-            <button type="submit">Add burger</button>
-        </form>
-    </div>
+            </ul>
 
 
 
 
-    <div class="row">
-        <div class="col-6">
+
+
+
+
+    <div class="row" style="margin-top: 3vw">
+        <div class="col-lg-6">
             <div class="notdevoured">
-                <h2 class="title">These burgeres are ready to eat!</h2>
-                <ul>
-                    {{#each burgers}}
-                    {{#unless devoured}}
-                    {{> burgers/burger-block devoured=true}}
-                    {{/unless}}
-                    {{/each}}
-                </ul>
+                <h2 class="title">READY!</h2>
+                <div class="card cardstyle title">
+                    <div class="card-body">
+                        <ul class="list-group list-group-flush"
+                            style=" margin-top: 10px; "
+                            class="list-group-item">
+
+                            <li >
+                                <div style="border: 2px solid red; border-radius: 25px; background:black" class="list-group-item">
+                                    <h1>Order up!</h1>
+                                    <h3>Your burgers are ready</h3>
+                                </div>
+                            </li>
+
+                            {{#each burgers}}
+                            {{#unless devoured}}
+                            {{> burgers/burger-block devoured=true}}
+                            {{/unless}}
+                            {{/each}}
+
+                        </ul>
+                    </div>
+
+                </div>
+
             </div>
         </div>
 
-        <div class="col-6">
-            <div="devoured">
-                <h2 class="title">These burgers have already been eaten... Order agian?</h2>
-                <ul>
-                    {{#each burgers}}
-                    {{#if devoured}}
-                    {{> burgers/burger-block devoured=false}}
-                    {{/if}}
-                    {{/each}}
-                </ul>
-        </div>
-    </div>
 
+
+
+
+        <div class="col-lg-6">
+            <div class="devoured">
+                <h2 class="title">Already Eaten!</h2>
+                <div class="card cardstyle title">
+                    <div class="card-body">
+                        <ul class="list-group list-group-flush"
+                            style=" margin-top: 10px;"
+                            class="list-group-item">
+
+                            <li>
+                                <div style="border: 2px solid red; border-radius: 25px; background:black" class="list-group-item" >
+                                    <h1>Yummy!</h1>
+                                    <h3>Those were good Burgers</h3>
+                                </div>
+                            </li>
+
+                            {{#each burgers}}
+                            {{#if devoured}}
+                            {{> burgers/burger-block devoured=false}}
+                            {{/if}}
+                            {{/each}}
+
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
 </div>
