@@ -16,7 +16,7 @@ This app shows some of the basic elementary functionaity of how a restuarant ord
 
 ## Links
 
-[See the Deployed BookShelf on Heroku](https://bookshelf-borrow-books.herokuapp.com/)
+[See the Deployed BookShelf on Heroku](https://burger-order-71213.herokuapp.com/)
 
 ## Screenshots
 
